@@ -13,9 +13,7 @@ SYNOLOGY_FOLDER = 'your synology target folder e.g. /volume2/downloads'
 ROOT = 'https://www.premiumize.me/api'
 GET_FOLDER_URL = "/folder/list?id="
 FOLDER_DELETE = "/folder/delete"
-url = GET_FOLDER_URL + FEED_DOWNLOADS_FOLDER_ID + "&customer_id=" + CUSTOMER_ID + "&pin=" + PIN + "&includebreadcrumbs=true"
 FOLDER_LIST = '%(root)s%(folder_url)s%(folder)s&customer_id=%(customer)s&pin=%(pin)s&includebreadcrumbs=true'
-url = FOLDER_LIST % dict(root=ROOT, folder_url=GET_FOLDER_URL, folder=FEED_DOWNLOADS_FOLDER_ID, customer=CUSTOMER_ID, pin=PIN)
 DELETE = '%(root)s%(delete)s?customer_id=%(customer)s&pin=%(pin)s'
 deleteUrl = DELETE % dict(root=ROOT, delete=FOLDER_DELETE, customer=CUSTOMER_ID, pin=PIN)
 
